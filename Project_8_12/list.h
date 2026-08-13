@@ -134,6 +134,15 @@ namespace button
 			empty_init();
 		}
 
+		list(initializer_list<T> il)
+		{
+			empty_init();
+			for (auto& e : il)
+			{
+				push_back(e);
+			}
+		}
+
 		list(const list<T>& lt)
 		{
 			empty_init();
@@ -284,6 +293,9 @@ namespace button
 
 		list<int> lt4 = lt3;
 		print_container(lt4);
+
+		list<int> lt5 = { 1, 2, 3, 4, 5, 5, 6};
+		print_container(lt5);
 
 	}
 
