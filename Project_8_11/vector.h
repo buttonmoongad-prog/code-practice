@@ -174,6 +174,19 @@ namespace button
 			return *(_start + pos);
 		}
 
+		vector<T>& operator=(vector<T> v)
+		{
+			size_t size = v.size();
+			reserve(size);
+
+			for (size_t i = 0; i < size; i++)
+			{
+				push_back(v._start[i]);
+			}
+
+			return *this;
+		}
+
 		~vector()
 		{
 			delete[] _start;
@@ -236,5 +249,19 @@ namespace button
 		v1.erase(v1.begin() + 1);
 		print(v1);
 
+	}
+	void test_vector3()
+	{
+		vector<int> v1;
+
+		v1.push_back(1);
+		v1.push_back(2);
+		v1.push_back(3);
+		v1.push_back(4);
+		v1.push_back(5);
+
+		vector<int> v2 = v1;
+		//v2 = v1;
+		print(v2);
 	}
 }

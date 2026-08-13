@@ -4,7 +4,8 @@
 int main()
 {
 	//button::test_vector1();
-	button::test_vector2();
+	//button::test_vector2();
+	button::test_vector3();
 
 
 	return 0;
